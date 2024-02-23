@@ -8,12 +8,6 @@ public class Client {
         Thread thread = new Thread(helloWorldPrinter);
         thread.start();
 
-        Thread thread1 = new Thread(helloWorldPrinter);
-        thread1.start();
-
-        Thread thread2 = new Thread(helloWorldPrinter);
-        thread2.start();
-
         System.out.println("Hello World : Thread name = " + Thread.currentThread().getName());
     }
 }
