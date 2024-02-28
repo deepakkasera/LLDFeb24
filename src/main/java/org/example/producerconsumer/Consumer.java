@@ -16,7 +16,7 @@ public class Consumer implements Runnable {
     @Override
     public void run() {
         while (true) {
-            if (store.size() > 0) {
+            if (store.size() > 0) { // C1, C3
                 System.out.println("Consumer: " + this.name + " is consuming, store size =" + store.size());
                 store.remove();
             }

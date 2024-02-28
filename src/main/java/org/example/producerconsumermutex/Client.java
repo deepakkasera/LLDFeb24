@@ -1,13 +1,9 @@
-package org.example.producerconsumer;
+package org.example.producerconsumermutex;
 
-import java.sql.Array;
 import java.util.ArrayDeque;
-import java.util.Objects;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Client {
     public static void main(String[] args) {
