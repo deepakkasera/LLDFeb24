@@ -46,7 +46,7 @@ public class MergeSorter implements Callable<List<Integer>> {
         Future<List<Integer>> rightSortedListFuture = executorService.submit(rightMergeSorter);
 
         //Merge.
-        List<Integer> leftSortedList = leftSortedListFuture.get(); // Blocking call.
+        List<Integer> leftSortedList = leftSortedListFuture.get(); // Blocking/Waiting call.
         List<Integer> rightSortedList = rightSortedListFuture.get(); // Blocking call.
 
         int i = 0, j = 0;
