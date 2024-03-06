@@ -1,12 +1,8 @@
 package org.example.streams;
 
-import org.example.functionalInterface.Client;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 public class Main {
     static class Car {
