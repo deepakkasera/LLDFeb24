@@ -81,6 +81,10 @@ public class Client {
         cars.add(car5);
         cars.add(car6);
 
+        List<Integer> numbers = new ArrayList<>();
+
+
+
         System.out.println(cars);
 
     }
