@@ -24,6 +24,8 @@ public class Main {
 //        student1.batchName = "Dec23 Evening batch";
         //student1.email = "deepak.kasera@scaler.com";
 
+        Student student1 = new Student();
+        System.out.println(student1);
     }
 
     public static void doSomething(Student student) { //700

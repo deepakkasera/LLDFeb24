@@ -1,5 +1,8 @@
 package org.example.generic;
 
+import org.example.inheritance2.A;
+
+import javax.swing.plaf.ListUI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -38,12 +41,17 @@ public class Main {
 
         List<Animal> animals = new ArrayList<>();
         List<Dog> dogs = new ArrayList<>();
+        List<Cat> cats = new ArrayList<>();
 
         doSomething(animals);
         doSomething(dogs);
 
         //List<Animal> animals1 = new ArrayList<Dog>(); -> Not possible
         //List<? extends Animal> animals1 = new ArrayList<Dog>(); -> Possible
+
+//        List<? extends Animal> list = new ArrayList<>();
+//        Animal an = new Dog();
+//        list.add(an);
     }
 
     private static void doSomething(List<? extends Animal> animals) {
