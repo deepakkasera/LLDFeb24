@@ -7,5 +7,7 @@ public class Client {
         //Student student = new Student();
         //student.age = 25; //protected.
         System.out.println("Hello world!");
+
+
     }
 }

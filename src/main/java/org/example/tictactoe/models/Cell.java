@@ -12,6 +12,15 @@ public class Cell {
         this.cellState = CellState.EMPTY;
     }
 
+    public void display() {
+        if (player == null) {
+            //cell is empty
+            System.out.print("| -- |");
+        } else {
+            System.out.print("| " + player.getSymbol().getaChar() + " |") ;
+        }
+    }
+
     public int getRow() {
         return row;
     }
