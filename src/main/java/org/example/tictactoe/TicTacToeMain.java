@@ -60,8 +60,11 @@ public class TicTacToeMain {
             gameController.makeMove(game);
         }
 
-        System.out.println("DEBUG");
-
-
+        gameController.printBoard(game);
+        if (gameController.gameState(game).equals(GameState.ENDED)) {
+            System.out.println(gameController.getWinner(game).getName() + " has won the game.");
+        } else {
+            System.out.println("GAME DRAW");
+        }
     }
 }
