@@ -1,5 +1,6 @@
 package org.example.tictactoe.controllers;
 
+import org.example.tictactoe.exception.InvalidMoveException;
 import org.example.tictactoe.models.Game;
 import org.example.tictactoe.models.GameState;
 import org.example.tictactoe.models.Player;
@@ -20,8 +21,8 @@ public class GameController {
                 .build();
     }
 
-    public void makeMove(Game game) {
-
+    public void makeMove(Game game) throws InvalidMoveException {
+        game.makeMove();
     }
 
     public GameState gameState(Game game) {

@@ -1,6 +1,7 @@
 package org.example.tictactoe;
 
 import org.example.tictactoe.controllers.GameController;
+import org.example.tictactoe.exception.InvalidMoveException;
 import org.example.tictactoe.models.*;
 import org.example.tictactoe.strategies.winningstrategy.ColWinningStrategy;
 import org.example.tictactoe.strategies.winningstrategy.DiagonalWinningStrategy;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TicTacToeMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidMoveException {
         System.out.println("GAME STARTS");
         Scanner scanner = new Scanner(System.in);
         GameController gameController = new GameController();
@@ -47,7 +48,7 @@ public class TicTacToeMain {
 
             gameController.printBoard(game);
 
-            System.out.println("Do you want to undo ?");
+            System.out.println("Do you want to undo ? y/n");
             String isUndo = scanner.next();
 
             if (isUndo.equalsIgnoreCase("y")) {
