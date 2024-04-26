@@ -40,3 +40,12 @@ public class ParkingLot extends BaseModel {
         this.parkingLotStatus = parkingLotStatus;
     }
 }
+
+
+/*
+
+1         m
+PL ----- Gate => 1 : M
+1          1
+
+ */
