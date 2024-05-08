@@ -7,6 +7,6 @@ import org.example.parkinglot.models.Vehicle;
 public class NearestSpotAssignmentStrategy implements ParkingSpotAssignmentStrategy {
     @Override
     public ParkingSpot assignParkingSpot(ParkingLot parkingLot, Vehicle vehicle) {
-        return null;
+        return new ParkingSpot();
     }
 }

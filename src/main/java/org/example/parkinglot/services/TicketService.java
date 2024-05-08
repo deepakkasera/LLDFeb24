@@ -2,6 +2,7 @@ package org.example.parkinglot.services;
 
 import org.example.parkinglot.exceptions.GateNotFoundException;
 import org.example.parkinglot.models.Gate;
+import org.example.parkinglot.models.ParkingLot;
 import org.example.parkinglot.models.Ticket;
 import org.example.parkinglot.models.Vehicle;
 import org.example.parkinglot.repositories.GateRepository;
@@ -57,11 +58,18 @@ public class TicketService {
         }
         ticket.setVehicle(vehicle);
 
-        ticket.setParkingSpot(parkingSpotAssignmentStrategy.assignParkingSpot(vehicle));
+        ParkingLot parkingLot = gate.getParkingLot();
 
-        return null;
+        ticket.setParkingSpot(parkingSpotAssignmentStrategy.assignParkingSpot(parkingLot,
+                vehicle));
+
+        return ticket;
     }
 }
+
+/*
+Object Relation Mapping (ORM) -> Hibernate (Java + SpringBoot)
+ */
 
 
 /*
